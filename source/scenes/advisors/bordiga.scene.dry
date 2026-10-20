@@ -21,7 +21,7 @@ subtitle: We can use the Red Guards to act.
 choose-if: advisor_action_timer = 0 
 view-if: not national_congress_seen
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1;
+on-arrival: advisor_action_timer = 1; last_advisor_action = 1;
 go-to: rg_orders
 
 @bordiga_revolution
@@ -29,7 +29,7 @@ title: Revolutionary Preparations
 subtitle: Continue our revolutionary planning.
 choose-if: advisor_action_timer = 0 and (participating = 0 or preparing_rev_active = 1)
 view-if: not national_congress_seen
-on-arrival: last_advisor_action = 1; advisor_action_timer = 6; preparing_revolution_timer = 5; 
+on-arrival: last_advisor_action = 1; advisor_action_timer = 1; preparing_revolution_timer = 5; 
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not_participating = 0 and maximalist_participating = 0 : We have chosen to abandon extraparliamentary means. ?]
 go-to: preparing_revolution
 
@@ -38,7 +38,7 @@ title: Rural Campaign
 subtitle: Try to campaign among the southern rural populace.
 choose-if: advisor_action_timer == 0 and agricultural_policy > 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if agricultural_policy == 0 : We have not enacted any rural policies. ?]
-on-arrival: advisor_action_timer = 6; rural_psi += 5*(1-dissent); 
+on-arrival: advisor_action_timer = 1; rural_psi += 5*(1-dissent); 
 
 We have increased our campaigning among farmers and the rural populace, especially amongst the South.
 
