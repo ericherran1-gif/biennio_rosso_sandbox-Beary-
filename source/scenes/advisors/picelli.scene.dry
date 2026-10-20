@@ -20,7 +20,7 @@ subtitle: We should warn the party about the growing [+ pnf_name +].
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer == 0
 view-if: not national_congress_seen
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1;
+on-arrival: advisor_action_timer = 1; last_advisor_action = 1;
 go-to: urgency
 
 @red_guards_picelli
@@ -29,7 +29,7 @@ subtitle: We can fund our paramilitary.
 choose-if: advisor_action_timer = 0
 view-if: not national_congress_seen
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+on-arrival: advisor_action_timer = 1; last_advisor_action = 1
 go-to: red_guards
 
 @arditi_picelli
@@ -38,5 +38,5 @@ subtitle: We can utilise the Arditi del Popolo.
 choose-if: advisor_action_timer = 0
 view-if: arditi_cooperation and arditi_formed
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; last_advisor_action = 1
+on-arrival: advisor_action_timer = 1; last_advisor_action = 1
 go-to: arditi
